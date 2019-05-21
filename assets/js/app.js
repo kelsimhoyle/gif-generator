@@ -20,7 +20,7 @@
     }
 
     function generateGifs(item) {
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + item + " memes&api_key=q23oHV6P0B2Ii2IRB8vmBK5rpAMGy3GL&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + item + " memes&api_key=q23oHV6P0B2Ii2IRB8vmBK5rpAMGy3GL&limit=10";
         $.ajax({
             url: queryURL,
             method: "GET"
