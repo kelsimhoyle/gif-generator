@@ -1,0 +1,91 @@
+body {
+    width: 85%;
+    margin: auto;
+    font-family: 'Catamaran', sans-serif;
+}
+
+form {
+    margin: 2%;
+}
+
+.gif-button {
+    display: inline-block;
+    margin: 1%;
+}
+
+
+/* .gif-div {
+    display: inline-block;
+    height: auto;
+    width: 30%;
+    margin: 1%;
+    color: whitesmoke;
+    border: 1px solid lightgray;
+    padding: .5%;
+} */
+
+img.gif {
+    width: 100%;
+}
+
+
+/* placing the main content */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.options {
+    float: right;
+    width: 18%;
+}
+
+#place-gifs {
+    float: left;
+    width: 78%;
+}
+
+.options, 
+#place-gifs {
+    box-sizing: border-box;
+    background-color: black;
+    padding: 1%;
+    margin: 1%;
+}
+
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .5%;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 24%;
+    padding: 0 .5%;
+  }
+  
+  .gif-div {
+    margin-top: .5%;
+    width: 100%;
+    vertical-align: middle;
+    color: whitesmoke;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

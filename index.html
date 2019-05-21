@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meme Gif Generator</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
         <h1>Meme Gif Generator</h1>
     </header>
-
-    <section>
+<div class="clearfix">
+    <section class="options">
         <form>
             <h3>Add a Meme:</h3>
             <input type="text" name="new-topic" id="new-topic">
             <input type="submit" id="submit">
         </form>
         <div id="topic-buttons">
-            <!-- buttons will be placed here -->
+         
         </div>
     </section>
 
-    <section id="place-gifs">
-        <!-- where gifs will appear -->
+    <section class="row" id="place-gifs">
+            <div class="column" id="col-1"></div>
+            <div class="column" id="col-2"></div>
+            <div class="column" id="col-3"></div>
+            <div class="column" id="col-4"></div>
     </section>
+</div>
 
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
