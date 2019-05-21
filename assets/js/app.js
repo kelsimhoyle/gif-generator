@@ -32,8 +32,12 @@
                 var animateUrl = gifs[i].images.fixed_height.url;
                 var gifDiv = $("<div>").addClass("gif-div");
                 var stillGif = $("<img>").attr("src", stillUrl).attr("data-state", "still").attr("data-still", stillUrl).attr("data-animate", animateUrl).addClass("gif");
+                var infoDiv = $("<div>").addClass("info hidden");
                 var rating = $("<p>").text(`Rating: ${gifs[i].rating}`);
-                gifDiv.append(stillGif, rating);
+                var title = $("<h4>").text(gifs[i].title);
+                // var downloadFull = $("<p>").html(`To download the full size gif, <a href="${gifs[i].images.original.url}" download="gif">click here</a>.`)
+                infoDiv.append(title, rating);
+                gifDiv.append(stillGif, infoDiv);
 
                 if( ( i+ 1) % 4 === 0) {
                     $("#col-4").prepend(gifDiv);
@@ -57,6 +61,10 @@
                     currentGif.attr("src", gifStill).attr("data-state", "still");
                 }
             });
+
+            $(".gif-div").hover(function(){
+                $(this).children("div").toggleClass("hidden");
+            })
         });
 
     }
