@@ -1,6 +1,6 @@
 
 
-var topics = ["deal with it", "kermit", "sips tea", "fail", "everything is fine", "you mad", "grumpy cat", "doge", "spongebob", "angry", "funny"];
+var topics = ["deal with it", "kermit", "sips tea", "excited", "everything is fine", "grumpy cat", "doge", "spongebob", "angry", "funny"];
 var searchTerm = "";
 var allGifs = [];
 
@@ -47,7 +47,6 @@ function generateGifs() {
             }
         }
     } if ($(window).width() <= 600 && $(window).width() > 0) {
-        console.log("600")
         for (var i = 0; i < allGifs.length; i++) {
             gifDiv = createContent(allGifs[i]);
 
@@ -55,7 +54,6 @@ function generateGifs() {
 
         }
     } else if ($(window).width() > 800) {
-        console.log("big")
         // generate into 4 coulumns
         for (var i = 0; i < allGifs.length; i++) {
 
@@ -85,13 +83,10 @@ function getGifs(item) {
         method: "GET"
     }).then(function (response) {
         var gifs = response.data;
-        console.log(gifs);
 
         for (var i = 0; i < gifs.length; i++) {
             allGifs.unshift(gifs[i]);
-        }
-
-        console.log(allGifs);
+        } 
         generateGifs();
     });
 
