@@ -1,27 +1,81 @@
 body {
     width: 90%;
     margin: auto;
+    margin-bottom: 2%;
     font-family: 'Catamaran', sans-serif;
     font-size: 16px;
+    color: grey;
+    background-image: linear-gradient(to bottom right, #ffc3a0, #ffafbd 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  color: #B36977;
+  text-align: center;
+  font-weight: bolder;
+  margin: 1%;
 }
 
 h4 {
     font-size: 18px;
+    font-style: italic;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+ color: #ffc3a0;
+}
+
+a:active {
+  color:  #ffafbd; 
 }
 
 form {
     margin: 2%;
 }
 
+input {
+  margin: 1.5%;
+}
+
+#new-topic {
+  width: 95%;
+}
+
+#submit,
 .gif-button {
-    display: inline-block;
-    margin: 1%;
-    background-color: black;
-    padding: 1%;
-    color: whitesmoke;
-    font-size: 14px;
-    border: 1px solid whitesmoke;
-    border-radius: 10%;
+  background-color: whitesmoke;
+  padding: 1%;
+  margin: 1%;
+  color: grey;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-radius: 10%;
+}
+
+
+ button:hover {
+  background-color: #ffc3a0;
+}
+
+
+button:active {
+  background-color:  #ffafbd; 
+}
+
+.gif-button {
+  display: inline-block;
 }
 
 img.gif {
@@ -49,13 +103,16 @@ img.gif {
     width: 78%;
 }
 
+
 .options, 
 #place-gifs {
     box-sizing: border-box;
-    background-color: black;
+    background-color: whitesmoke;
     padding: 1%;
     margin: 1%;
+    box-shadow: 5px 5px 10px 2px #888888;
 }
+
 
  .row {
     display: flex;
@@ -65,16 +122,16 @@ img.gif {
   
   /* Create four equal columns that sits next to each other */
   .column {
-    flex: 25%;
+    flex: 24%;
     max-width: 24%;
     padding: 0 .5%;
   }
   
   .gif-div {
     margin-top: .5%;
-    width: 100%;
+    width: 99%;
     vertical-align: middle;
-    color: whitesmoke;
+    color: 	#202020;
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
